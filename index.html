@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Клінінг для дому та офісу — прибирання з гарантією результату</title>
+<meta name="description" content="Приватний клінінг: підтримуюче, генеральне прибирання, після ремонту. Фіксована ціна, свої засоби, переробимо безкоштовно, якщо щось не сподобається. Розрахуйте вартість за 30 секунд.">
+<meta name="theme-color" content="#0e8f8a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Клінінг для дому та офісу — прибирання з гарантією результату">
+<meta property="og:description" content="Фіксована ціна, свої засоби, безкоштовне виправлення. Розрахуйте вартість онлайн.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=75">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<!--
+  ================= ЩО ЗМІНИТИ ПЕРЕД ПУБЛІКАЦІЄЮ =================
+  1. Блок CONFIG у <script> внизу: телефон, Telegram, ціни, місто.
+  2. Пошук по файлу: "Олена" -> ваше ім'я; "Ваше місто" -> місто.
+  3. Блок JSON-LD нижче (телефон, місто).
+  4. Додайте СПРАВЖНІ відгуки клієнтів у секцію #reviews (шаблон закоментовано).
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "name": "Клінінг — Олена",
+  "description": "Підтримуюче, генеральне прибирання та прибирання після ремонту.",
+  "telephone": "+380000000000",
+  "areaServed": "Ваше місто",
+  "priceRange": "₴₴"
+}
+</script>
+
+<style>
+:root{
+  --ink:#0f2a2e;
+  --ink-soft:#4b6165;
+  --teal:#0e8f8a;
+  --teal-dark:#0a6e6a;
+  --mint:#d9f3ee;
+  --mint-2:#eef9f6;
+  --cream:#fbf8f3;
+  --coral:#ff6b4a;
+  --coral-dark:#e9532f;
+  --white:#fff;
+  --line:rgba(15,42,46,.1);
+  --radius:20px;
+  --radius-sm:12px;
+  --shadow:0 12px 40px -12px rgba(15,42,46,.18);
+  --shadow-lg:0 24px 60px -16px rgba(15,42,46,.28);
+  --container:1120px;
+  --gutter:clamp(16px,5vw,32px);
+  --section:clamp(64px,9vw,112px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --bar-h:0px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color:var(--ink);background:var(--cream);
+  font-size:17px;line-height:1.6;
+  overflow-x:hidden;
+  padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom));
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:var(--section);position:relative}
+.section--mint{background:var(--mint-2)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--teal-dark);margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--coral);border-radius:2px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+h1{font-size:clamp(34px,6.4vw,64px)}
+h2{font-size:clamp(28px,4.4vw,44px);margin-bottom:16px}
+h3{font-size:clamp(20px,2.4vw,24px);margin-bottom:8px}
+h1 em,h2 em{font-style:italic;color:var(--teal)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--ink-soft);max-width:60ch}
+.section-head{max-width:680px;margin-bottom:clamp(32px,5vw,56px)}
+.section-head--center{margin-inline:auto;text-align:center}
+.section-head--center .eyebrow{justify-content:center}
+.section-head--center .lead{margin-inline:auto}
+
+/* Buttons */
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:14px 28px;border-radius:999px;
+  font-weight:700;font-size:16px;line-height:1.2;text-align:center;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s;
+  overflow:hidden;isolation:isolate;
+}
+.btn--primary{background:var(--coral);color:#fff;box-shadow:0 10px 28px -8px rgba(255,107,74,.65)}
+.btn--primary:hover{background:var(--coral-dark);transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(255,107,74,.7)}
+.btn--primary::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);
+  transform:translateX(-120%);animation:shine 3.8s var(--ease) infinite;
+}
+.btn--ghost{background:var(--white);color:var(--ink);border:1.5px solid var(--line)}
+.btn--ghost:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn--block{width:100%}
+.btn svg{width:20px;height:20px;flex:none}
+@keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+/* Header */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  padding-top:env(safe-area-inset-top);
+  transition:background .3s,box-shadow .3s,backdrop-filter .3s;
+}
+.header.is-stuck{background:rgba(251,248,243,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.header__in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+.logo__mark{
+  width:40px;height:40px;border-radius:12px;background:var(--teal);color:#fff;
+  display:grid;place-items:center;font-size:20px;
+}
+.nav{display:none;gap:32px;font-weight:600;font-size:15px}
+.nav a{position:relative;padding:8px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:2px;height:2px;width:100%;background:var(--coral);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.header__cta{display:none}
+.header__phone{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;
+}
+.header__phone svg{width:22px;height:22px}
+@media (min-width:900px){
+  .nav{display:flex}
+  .header__cta{display:inline-flex;min-height:46px;padding:10px 22px}
+  .header__phone{display:none}
+}
+
+/* Hero */
+.hero{
+  position:relative;padding-top:calc(72px + clamp(32px,6vw,72px));padding-bottom:var(--section);
+  background:
+    radial-gradient(900px 500px at 85% 10%,rgba(14,143,138,.16),transparent 60%),
+    radial-gradient(700px 400px at 0% 90%,rgba(255,107,74,.1),transparent 60%),
+    var(--cream);
+  overflow:hidden;
+}
+.hero__grid{display:grid;gap:clamp(32px,5vw,56px);align-items:center}
+@media (min-width:900px){.hero__grid{grid-template-columns:1.05fr .95fr}}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border-radius:999px;
+  background:var(--white);box-shadow:var(--shadow);font-size:14px;font-weight:600;margin-bottom:24px;
+}
+.hero__badge i{width:10px;height:10px;border-radius:50%;background:#2fc27a;box-shadow:0 0 0 0 rgba(47,194,122,.6);animation:pulse 2s infinite;display:block}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(47,194,122,0)}100%{box-shadow:0 0 0 0 rgba(47,194,122,0)}}
+.hero h1{margin-bottom:24px}
+.hero .lead{margin-bottom:32px}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
+.hero__points{display:grid;gap:12px;list-style:none}
+.hero__points li{display:flex;align-items:flex-start;gap:12px;font-weight:600;font-size:16px}
+.tick{flex:none;width:24px;height:24px;border-radius:50%;background:var(--mint);color:var(--teal-dark);display:grid;place-items:center;margin-top:1px}
+.tick svg{width:14px;height:14px}
+.hero__visual{position:relative}
+.hero__photo{
+  position:relative;border-radius:var(--radius) var(--radius) 120px var(--radius);
+  overflow:hidden;aspect-ratio:4/5;background:linear-gradient(135deg,var(--mint),#9fd9d1);box-shadow:var(--shadow-lg);
+}
+.hero__photo img{width:100%;height:100%;object-fit:cover}
+.float-card{
+  position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;
+  background:rgba(255,255,255,.95);box-shadow:var(--shadow);font-size:14px;font-weight:700;line-height:1.3;
+  animation:floaty 6s ease-in-out infinite;
+}
+.float-card small{display:block;font-weight:500;color:var(--ink-soft);font-size:12px}
+.float-card .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:var(--mint)}
+.float-card--a{left:-8px;bottom:12%}
+.float-card--b{right:-8px;top:8%;animation-delay:-3s}
+@media (min-width:900px){.float-card--a{left:-32px}.float-card--b{right:-24px}}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+.bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.bubble{
+  position:absolute;bottom:-60px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.95),rgba(14,143,138,.12) 60%,rgba(14,143,138,.2));
+  border:1px solid rgba(14,143,138,.2);
+  animation:rise linear infinite;opacity:0;
+}
+@keyframes rise{
+  0%{transform:translate3d(0,0,0);opacity:0}
+  10%{opacity:.9}
+  100%{transform:translate3d(var(--dx,20px),-110vh,0);opacity:0}
+}
+.hero .container{position:relative;z-index:1}
+
+/* Trust bar */
+.trust{background:var(--ink);color:#fff;padding-block:32px}
+.trust__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media (min-width:768px){.trust__grid{grid-template-columns:repeat(4,1fr)}}
+.stat{text-align:center}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,44px);line-height:1.1;color:#8be5d8}
+.stat span{font-size:14px;opacity:.8}
+
+/* Services */
+.cards{display:grid;gap:24px}
+@media (min-width:700px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card__img{aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,var(--mint),#b5e3dc)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .card__img img{transform:scale(1.06)}
+.card__body{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card__body p{color:var(--ink-soft);font-size:16px}
+.card ul{list-style:none;display:grid;gap:8px;font-size:15px;margin-top:4px}
+.card li{display:flex;gap:10px;align-items:flex-start}
+.card li::before{content:"✓";color:var(--teal);font-weight:800}
+.card__price{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card__price span{color:var(--ink-soft);font-weight:500;font-size:14px}
+.card__price b{font-size:20px;color:var(--teal-dark)}
+
+/* Before / After */
+.ba-wrap{display:grid;gap:clamp(32px,5vw,56px);align-items:center}
+@media (min-width:900px){.ba-wrap{grid-template-columns:1fr 1fr}}
+.ba{
+  --pos:50%;position:relative;border-radius:var(--radius);overflow:hidden;
+  aspect-ratio:4/3;background:linear-gradient(135deg,var(--mint),#9fd9d1);box-shadow:var(--shadow-lg);
+  user-select:none;-webkit-user-select:none;touch-action:pan-y;
+}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba__before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba__before img{filter:grayscale(.65) brightness(.62) contrast(.9) sepia(.35)}
+.ba__before::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(60,40,20,.35) 0 6%,transparent 7%),
+    radial-gradient(circle at 70% 60%,rgba(60,40,20,.3) 0 8%,transparent 9%),
+    radial-gradient(circle at 45% 80%,rgba(60,40,20,.3) 0 5%,transparent 6%),
+    radial-gradient(circle at 85% 20%,rgba(60,40,20,.25) 0 5%,transparent 6%);
+}
+.ba__tag{
+  position:absolute;top:16px;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700;
+  background:rgba(15,42,46,.8);color:#fff;z-index:2;
+}
+.ba__tag--l{left:16px}.ba__tag--r{right:16px;background:var(--teal)}
+.ba__handle{
+  position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:#fff;transform:translateX(-50%);z-index:3;pointer-events:none;
+  box-shadow:0 0 0 1px rgba(0,0,0,.08);
+}
+.ba__handle::after{
+  content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;
+  font-size:22px;font-weight:700;color:var(--teal-dark);box-shadow:var(--shadow);
+}
+.ba input{
+  position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0;
+}
+.note{font-size:13px;color:var(--ink-soft);margin-top:12px}
+.checks{list-style:none;display:grid;gap:16px;margin-top:24px}
+.checks li{display:flex;gap:14px;align-items:flex-start}
+.checks b{display:block}
+.checks span.t{color:var(--ink-soft);font-size:15px}
+
+/* Calculator */
+.calc{
+  display:grid;gap:0;background:var(--white);border-radius:28px;box-shadow:var(--shadow-lg);overflow:hidden;
+}
+@media (min-width:900px){.calc{grid-template-columns:1.15fr .85fr}}
+.calc__form{padding:clamp(24px,4vw,48px);display:grid;gap:28px}
+.field-label{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;margin-bottom:12px}
+.field-label output{color:var(--teal-dark);font-size:22px}
+.chips{display:grid;gap:10px;grid-template-columns:1fr}
+@media (min-width:520px){.chips{grid-template-columns:repeat(3,1fr)}}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.chip span{
+  display:flex;flex-direction:column;justify-content:center;min-height:64px;padding:12px 16px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--line);font-weight:700;font-size:15px;line-height:1.3;transition:.25s;background:var(--cream);
+}
+.chip span small{font-weight:500;color:var(--ink-soft);font-size:12px}
+.chip input:checked + span{border-color:var(--teal);background:var(--mint);box-shadow:0 0 0 3px rgba(14,143,138,.15)}
+.chip input:focus-visible + span{outline:3px solid var(--coral);outline-offset:2px}
+input[type=range]{
+  -webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:99px;
+  background:linear-gradient(90deg,var(--teal) var(--fill,30%),var(--mint) var(--fill,30%));outline-offset:6px;
+}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:4px solid var(--teal);box-shadow:var(--shadow);cursor:grab}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:4px solid var(--teal);box-shadow:var(--shadow);cursor:grab}
+.extras{display:grid;gap:10px}
+.extra{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;border-radius:var(--radius-sm);border:1.5px solid var(--line);cursor:pointer;background:var(--cream);transition:.25s}
+.extra:has(input:checked){border-color:var(--teal);background:var(--mint)}
+.extra input{width:22px;height:22px;accent-color:var(--teal);flex:none}
+.extra span{flex:1;font-weight:600;font-size:15px}
+.extra em{font-style:normal;color:var(--ink-soft);font-size:14px;white-space:nowrap}
+.calc__result{
+  background:linear-gradient(160deg,var(--teal) 0%,var(--teal-dark) 100%);color:#fff;
+  padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:16px;position:relative;overflow:hidden;
+}
+.calc__result::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.08);top:-80px;right:-80px}
+.calc__result>*{position:relative}
+.calc__label{opacity:.85;font-size:15px}
+.calc__sum{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(44px,8vw,64px);line-height:1}
+.calc__sum small{font-size:.4em;font-family:'Manrope',sans-serif;font-weight:700;margin-left:6px}
+.calc__list{list-style:none;font-size:15px;display:grid;gap:8px;opacity:.95}
+.calc__list li::before{content:"✓ ";font-weight:800}
+.calc__fine{font-size:12px;opacity:.75}
+
+/* Steps */
+.steps{display:grid;gap:24px;counter-reset:s}
+@media (min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;padding:28px 24px;border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow);counter-increment:s}
+.step::before{
+  content:counter(s);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;
+  background:var(--coral);color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:22px;margin-bottom:16px;
+}
+.step p{color:var(--ink-soft);font-size:15px}
+
+/* Guarantee */
+.guarantee{
+  display:grid;gap:24px;align-items:center;padding:clamp(28px,5vw,56px);border-radius:28px;
+  background:var(--ink);color:#fff;position:relative;overflow:hidden;
+}
+@media (min-width:800px){.guarantee{grid-template-columns:auto 1fr}}
+.guarantee::before{content:"";position:absolute;right:-100px;bottom:-100px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(14,143,138,.5),transparent 70%)}
+.guarantee__seal{
+  width:104px;height:104px;border-radius:50%;background:var(--coral);display:grid;place-items:center;
+  font-size:48px;box-shadow:0 0 0 8px rgba(255,107,74,.25);position:relative;
+}
+.guarantee h2{color:#fff;margin-bottom:12px}
+.guarantee p{opacity:.85;max-width:62ch;position:relative}
+
+/* Reviews placeholder */
+.reviews-empty{
+  text-align:center;padding:32px;border:2px dashed var(--line);border-radius:var(--radius);color:var(--ink-soft);
+}
+
+/* FAQ */
+.faq{max-width:780px;margin-inline:auto;display:grid;gap:12px}
+.faq details{background:var(--white);border-radius:var(--radius-sm);box-shadow:0 4px 16px -8px rgba(15,42,46,.18);overflow:hidden}
+.faq summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  min-height:60px;padding:16px 20px;font-weight:700;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;background:var(--mint);color:var(--teal-dark);display:grid;place-items:center;font-size:22px;transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--coral);color:#fff}
+.faq .ans{padding:0 20px 20px;color:var(--ink-soft);font-size:16px}
+
+/* Form */
+.cta{
+  background:linear-gradient(160deg,var(--teal) 0%,var(--teal-dark) 100%);color:#fff;position:relative;overflow:hidden;
+}
+.cta::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.06);top:-200px;left:-160px}
+.cta__grid{display:grid;gap:clamp(32px,5vw,56px);align-items:center;position:relative}
+@media (min-width:900px){.cta__grid{grid-template-columns:1fr 1fr}}
+.cta h2{color:#fff}
+.cta .lead{color:rgba(255,255,255,.88)}
+.cta .eyebrow{color:#bff3ea}
+.contacts{display:grid;gap:12px;margin-top:28px}
+.contacts a{display:flex;align-items:center;gap:14px;font-weight:700;font-size:18px;min-height:48px}
+.contacts .ico{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.14);display:grid;place-items:center;flex:none}
+.contacts svg{width:22px;height:22px}
+.form{background:var(--white);color:var(--ink);padding:clamp(24px,4vw,40px);border-radius:24px;box-shadow:var(--shadow-lg);display:grid;gap:16px}
+.form h3{margin-bottom:0}
+.form .sub{color:var(--ink-soft);font-size:15px;margin-top:-8px}
+.fg{display:grid;gap:6px}
+.fg label{font-weight:700;font-size:14px}
+.fg input,.fg select,.fg textarea{
+  width:100%;min-height:52px;padding:12px 16px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--line);background:var(--cream);transition:border-color .2s,box-shadow .2s;font-size:16px;
+}
+.fg textarea{min-height:96px;resize:vertical}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(14,143,138,.15);background:#fff}
+.fg .err{display:none;color:#c8321a;font-size:13px;font-weight:600}
+.fg.has-error input{border-color:#c8321a}
+.fg.has-error .err{display:block}
+.form__ok{display:none;padding:14px 16px;border-radius:var(--radius-sm);background:var(--mint);color:var(--teal-dark);font-weight:600;font-size:15px}
+.form__ok.show{display:block}
+.form__legal{font-size:12px;color:var(--ink-soft);text-align:center}
+
+/* Footer */
+.footer{background:var(--ink);color:rgba(255,255,255,.7);padding-block:32px;font-size:14px}
+.footer__in{display:flex;flex-direction:column;gap:8px;text-align:center}
+@media (min-width:700px){.footer__in{flex-direction:row;justify-content:space-between;text-align:left}}
+
+/* Sticky mobile bar */
+.mbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;
+  padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:0 -8px 30px -10px rgba(15,42,46,.25);transform:translateY(110%);transition:transform .4s var(--ease);
+}
+.mbar.show{transform:none}
+.mbar .btn{flex:1;min-height:48px;padding:10px 12px;font-size:15px}
+@media (max-width:799px){.mbar{display:flex}:root{--bar-h:72px}}
+
+/* Reveal animations (only when JS is on) */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Broken image fallback */
+img.is-broken{display:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+  .bubbles{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__in">
+    <a href="#top" class="logo" aria-label="На початок"><span class="logo__mark" aria-hidden="true">✨</span>Чисто з Оленою</a>
+    <nav class="nav" aria-label="Головне меню">
+      <a href="#services">Послуги</a>
+      <a href="#calc">Ціна</a>
+      <a href="#how">Як працюю</a>
+      <a href="#faq">Питання</a>
+    </nav>
+    <a href="#order" class="btn btn--primary header__cta">Отримати розрахунок</a>
+    <a href="tel:+380000000000" class="header__phone" data-phone-link aria-label="Зателефонувати">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+  <div class="container hero__grid">
+    <div>
+      <div class="hero__badge reveal"><i></i>Є вільні дати на цьому тижні</div>
+      <h1 class="reveal" style="--d:.08s">Дім, у якому <em>хочеться дихати</em> на повні груди</h1>
+      <p class="lead reveal" style="--d:.16s">Приватний клінінг без посередників: приходжу сама, з власними засобами та технікою. Ви знаєте ціну наперед — і платите лише тоді, коли задоволені результатом.</p>
+      <div class="hero__actions reveal" style="--d:.24s">
+        <a href="#calc" class="btn btn--primary">Порахувати вартість за 30 с</a>
+        <a href="#order" class="btn btn--ghost">Написати в Telegram</a>
+      </div>
+      <ul class="hero__points reveal" style="--d:.32s">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Фіксована ціна — жодних доплат після роботи</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Безпечні засоби — підходять для дітей і тварин</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Не сподобалось — переприбираю безкоштовно</li>
+      </ul>
+    </div>
+    <div class="hero__visual reveal" style="--d:.2s">
+      <div class="hero__photo">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=75" alt="Прибирання оселі: рукавички, спрей і мікрофібра" width="1000" height="1250" fetchpriority="high">
+      </div>
+      <div class="float-card float-card--a"><span class="ico">🌿</span><div>Еко-засоби<small>без різких запахів</small></div></div>
+      <div class="float-card float-card--b"><span class="ico">⏱</span><div>Відповідь за 15 хв<small>з 8:00 до 21:00</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" aria-label="Коротко про мене">
+  <div class="container trust__grid">
+    <div class="stat"><b data-count="10" data-suffix="+">0</b><span>років досвіду</span></div>
+    <div class="stat"><b data-count="100" data-suffix="%">0</b><span>власні засоби та техніка</span></div>
+    <div class="stat"><b data-count="24" data-suffix=" год">0</b><span>на безкоштовне виправлення</span></div>
+    <div class="stat"><b data-count="0" data-suffix=" грн">0</b><span>прихованих доплат</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Послуги</span>
+      <h2>Оберіть формат — решту <em>візьму на себе</em></h2>
+      <p class="lead">Від щотижневої підтримки порядку до генерального прибирання перед святом чи після ремонту.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=70" alt="Світла чиста кухня" width="800" height="500"></div>
+        <div class="card__body">
+          <h3>Підтримуюче прибирання</h3>
+          <p>Регулярний порядок у квартирі чи будинку без вашої участі.</p>
+          <ul><li>Пилосос і вологе прибирання підлоги</li><li>Протирання поверхонь і меблів</li><li>Кухня, санвузол, дзеркала</li></ul>
+          <div class="card__price"><span>від</span><b data-price="regular"></b></div>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:.1s">
+        <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=70" alt="Охайна світла вітальня" width="800" height="500"></div>
+        <div class="card__body">
+          <h3>Генеральне прибирання</h3>
+          <p>Глибоке очищення всього, до чого не доходять руки щодня.</p>
+          <ul><li>Мийка вікон, рам і підвіконь</li><li>Плита, духовка, холодильник зсередини</li><li>Плінтуси, двері, труднодоступні місця</li></ul>
+          <div class="card__price"><span>від</span><b data-price="general"></b></div>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:.2s">
+        <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=70" alt="Чистий санвузол зі світлою плиткою" width="800" height="500"></div>
+        <div class="card__body">
+          <h3>Після ремонту</h3>
+          <p>Прибираю будівельний пил, залишки фугів, плівки та плями.</p>
+          <ul><li>Видалення будівельного пилу</li><li>Очищення плитки, скла, сантехніки</li><li>Вологе фінішне прибирання</li></ul>
+          <div class="card__price"><span>від</span><b data-price="repair"></b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="section section--mint" id="result">
+  <div class="container ba-wrap">
+    <div class="reveal">
+      <div class="ba" id="ba">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=70" alt="Приклад чистої кімнати — після прибирання" width="1000" height="750" loading="lazy">
+        <div class="ba__before"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=70" alt="" width="1000" height="750" loading="lazy" aria-hidden="true"></div>
+        <span class="ba__tag ba__tag--l">До</span><span class="ba__tag ba__tag--r">Після</span>
+        <div class="ba__handle"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Порівняти до і після">
+      </div>
+      <p class="note">Ілюстрація ефекту на стоковому фото. Замініть на свої реальні «до/після» — це найсильніший аргумент для клієнта.</p>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <span class="eyebrow">Результат</span>
+      <h2>Різницю видно <em>з порога</em></h2>
+      <p class="lead">Працюю за чек-листом, тож жодна зона не губиться — навіть коли ви цього не просили озвучувати.</p>
+      <ul class="checks">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Чек-лист на кожне замовлення</b><span class="t">Ви бачите, що саме буде зроблено, ще до початку.</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Фото після завершення</b><span class="t">Надішлю знімки, щоб ви побачили результат навіть з роботи.</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Бережу ваші речі</b><span class="t">Акуратно працюю з технікою, меблями та покриттями.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section" id="calc">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Калькулятор</span>
+      <h2>Дізнайтесь ціну <em>без дзвінків</em></h2>
+      <p class="lead">Оберіть тип прибирання та площу — отримаєте орієнтовну вартість одразу.</p>
+    </div>
+    <div class="calc reveal">
+      <form class="calc__form" id="calcForm" onsubmit="return false">
+        <fieldset style="border:0;min-width:0">
+          <legend class="field-label">Тип прибирання</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="type" value="regular" checked><span>Підтримуюче<small>регулярне</small></span></label>
+            <label class="chip"><input type="radio" name="type" value="general"><span>Генеральне<small>глибоке</small></span></label>
+            <label class="chip"><input type="radio" name="type" value="repair"><span>Після ремонту<small>будівельний пил</small></span></label>
+          </div>
+        </fieldset>
+        <div>
+          <div class="field-label"><label for="area">Площа приміщення</label><output id="areaOut" for="area">50 м²</output></div>
+          <input type="range" id="area" min="20" max="200" step="5" value="50">
+        </div>
+        <fieldset style="border:0;min-width:0">
+          <legend class="field-label">Додатково</legend>
+          <div class="extras" id="extras"></div>
+        </fieldset>
+      </form>
+      <div class="calc__result" aria-live="polite">
+        <span class="calc__label">Орієнтовна вартість</span>
+        <div class="calc__sum"><span id="sum">0</span><small>грн</small></div>
+        <ul class="calc__list">
+          <li>Усі засоби та інвентар включено</li>
+          <li>Ціна фіксується до початку роботи</li>
+          <li>Безкоштовне виправлення протягом 24 год</li>
+        </ul>
+        <a href="#order" class="btn btn--primary btn--block" id="calcCta">Замовити за цією ціною</a>
+        <span class="calc__fine">Точну вартість підтверджу після короткого уточнення стану приміщення.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="section section--mint" id="how">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Як це працює</span>
+      <h2>Чотири кроки — і <em>чисто</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Заявка</h3><p>Залиште номер або напишіть у месенджер — відповім протягом 15 хвилин.</p></div>
+      <div class="step reveal" style="--d:.08s"><h3>Розрахунок</h3><p>Уточню деталі й назву остаточну ціну, яка не зміниться.</p></div>
+      <div class="step reveal" style="--d:.16s"><h3>Прибирання</h3><p>Приїжджаю в зручний час зі своїми засобами та технікою.</p></div>
+      <div class="step reveal" style="--d:.24s"><h3>Прийом роботи</h3><p>Ви перевіряєте результат. Щось не так — виправлю безкоштовно.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="section">
+  <div class="container">
+    <div class="guarantee reveal">
+      <div class="guarantee__seal" aria-hidden="true">🛡️</div>
+      <div>
+        <h2>Гарантія задоволеного результату</h2>
+        <p>Якщо після прибирання ви знайдете місце, яке вас не влаштовує, — повідомте протягом 24 годин, і я приїду та виправлю це безкоштовно. Для мене кожен клієнт — це рекомендації, а не разове замовлення.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (шаблон) -->
+<section class="section section--mint" id="reviews" style="padding-block:clamp(48px,7vw,80px)">
+  <div class="container">
+    <div class="section-head section-head--center reveal" style="margin-bottom:32px">
+      <span class="eyebrow">Відгуки</span>
+      <h2>Що кажуть <em>клієнти</em></h2>
+    </div>
+    <div class="reviews-empty reveal">
+      <p><b>Додайте сюди справжні відгуки клієнтів</b> (скріншоти з месенджерів або Google Maps — з дозволу авторів).<br>Вигадані відгуки не додавайте: це порушує закон про рекламу та підриває довіру.</p>
+    </div>
+    <!--
+      ШАБЛОН ВІДГУКУ — вставте реальний текст:
+      <blockquote class="review"><p>Текст відгуку</p><footer>— Ім'я, місто</footer></blockquote>
+    -->
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Питання</span>
+      <h2>Відповіді на <em>часті питання</em></h2>
+    </div>
+    <div class="faq">
+      <details class="reveal" open><summary>Чи потрібні мої засоби та пилосос?</summary><div class="ans">Ні. Я привожу все необхідне: професійну хімію, мікрофібру, пилосос та інвентар. Якщо у вас є особливі вимоги до засобів (алергія, діти) — скажіть, підберу безпечні.</div></details>
+      <details class="reveal"><summary>Чи потрібно бути вдома під час прибирання?</summary><div class="ans">Не обов'язково. Багато клієнтів залишають ключі на час роботи. Після завершення надішлю фото результату.</div></details>
+      <details class="reveal"><summary>Скільки часу триває прибирання?</summary><div class="ans">Залежить від площі та стану приміщення. Для квартири 50 м² підтримуюче прибирання зазвичай займає кілька годин; точний час повідомлю під час розрахунку.</div></details>
+      <details class="reveal"><summary>Як відбувається оплата?</summary><div class="ans">Після прийому роботи — готівкою або переказом на картку. Сума — та, що ми погодили заздалегідь, без доплат.</div></details>
+      <details class="reveal"><summary>Що, якщо мені щось не сподобається?</summary><div class="ans">Повідомте протягом 24 годин — я приїду та виправлю це безкоштовно.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="section cta" id="order">
+  <div class="container cta__grid">
+    <div class="reveal">
+      <span class="eyebrow">Заявка</span>
+      <h2>Забронюйте дату <em style="color:#8be5d8">вже сьогодні</em></h2>
+      <p class="lead">Залиште контакти — передзвоню або напишу в зручний месенджер протягом 15 хвилин (з 8:00 до 21:00).</p>
+      <div class="contacts">
+        <a href="tel:+380000000000" data-phone-link><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span data-phone-text>+38 (000) 000-00-00</span></a>
+        <a href="https://t.me/your_username" target="_blank" rel="noopener" data-tg-link><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg></span><span>Telegram</span></a>
+      </div>
+    </div>
+    <form class="form reveal" id="leadForm" novalidate style="--d:.1s">
+      <h3>Отримати розрахунок</h3>
+      <p class="sub">Без спаму та зобов'язань.</p>
+      <div class="fg"><label for="name">Ваше ім'я</label><input id="name" name="name" type="text" autocomplete="given-name" placeholder="Наприклад, Марія" required><span class="err">Вкажіть ім'я</span></div>
+      <div class="fg"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+38 0__ ___ __ __" required><span class="err">Вкажіть коректний номер телефону</span></div>
+      <div class="fg"><label for="service">Що потрібно прибрати?</label>
+        <select id="service" name="service">
+          <option value="Підтримуюче прибирання">Підтримуюче прибирання</option>
+          <option value="Генеральне прибирання">Генеральне прибирання</option>
+          <option value="Прибирання після ремонту">Прибирання після ремонту</option>
+          <option value="Інше">Інше</option>
+        </select>
+      </div>
+      <div class="fg"><label for="msg">Коментар (необов'язково)</label><textarea id="msg" name="msg" placeholder="Площа, адреса, бажана дата"></textarea></div>
+      <button type="submit" class="btn btn--primary btn--block">Відправити заявку в Telegram</button>
+      <div class="form__ok" id="formOk" role="status">Дякую! Telegram відкрито з вашою заявкою — залишилось натиснути «Надіслати». Якщо нічого не відкрилось, зателефонуйте за номером вище.</div>
+      <p class="form__legal">Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних для зв'язку щодо замовлення.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <span>© <span id="year"></span> Чисто з Оленою · Клінінг у м. <span data-city>Ваше місто</span></span>
+    <span>Працюю щодня 8:00–21:00</span>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+380000000000" class="btn btn--ghost" data-phone-link>Зателефонувати</a>
+  <a href="#calc" class="btn btn--primary">Порахувати ціну</a>
+</div>
+
+<script>
+/* ================= CONFIG: змініть під себе ================= */
+const CONFIG = {
+  phone: "+380000000000",             // формат для посилань, без пробілів
+  phoneDisplay: "+38 (000) 000-00-00",// як показувати на сайті
+  telegram: "your_username",          // нік у Telegram без @
+  city: "Ваше місто",
+  prices: {
+    regular: { rate: 25, min: 800,  label: "Підтримуюче" },   // грн за м²
+    general: { rate: 50, min: 1800, label: "Генеральне" },
+    repair:  { rate: 80, min: 2800, label: "Після ремонту" }
+  },
+  extras: [
+    { id: "windows", name: "Мийка вікон",            price: 300 },
+    { id: "oven",    name: "Духовка та холодильник", price: 400 },
+    { id: "balcony", name: "Балкон / лоджія",        price: 350 }
+  ]
+};
+/* ============================================================ */
+
+document.documentElement.classList.add('js');
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const fmt = n => Math.round(n).toLocaleString('uk-UA');
+
+/* Підстановка контактів */
+$$('[data-phone-link]').forEach(a => a.href = 'tel:' + CONFIG.phone);
+$$('[data-phone-text]').forEach(s => s.textContent = CONFIG.phoneDisplay);
+$$('[data-tg-link]').forEach(a => a.href = 'https://t.me/' + CONFIG.telegram);
+$$('[data-city]').forEach(s => s.textContent = CONFIG.city);
+$$('[data-price]').forEach(b => { const p = CONFIG.prices[b.dataset.price]; b.textContent = fmt(p.min) + ' грн'; });
+$('#year').textContent = new Date().getFullYear();
+
+/* Зламані зображення -> градієнтний запасний фон */
+$$('img').forEach(img => img.addEventListener('error', () => img.classList.add('is-broken')));
+
+/* Шапка */
+const header = $('#header');
+const mbar = $('#mbar');
+const onScroll = () => {
+  header.classList.toggle('is-stuck', scrollY > 16);
+  mbar.classList.toggle('show', scrollY > 480);
+};
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+/* Поява при скролі */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+$$('.reveal').forEach(el => io.observe(el));
+
+/* Лічильники */
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, to = +el.dataset.count, suf = el.dataset.suffix || '';
+    const t0 = performance.now(), dur = 1400;
+    const tick = t => {
+      const p = Math.min((t - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * eased) + suf;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    countIO.unobserve(el);
+  });
+}, { threshold: .6 });
+$$('[data-count]').forEach(el => countIO.observe(el));
+
+/* Бульбашки у hero */
+(function bubbles() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const box = $('#bubbles'); const n = innerWidth < 700 ? 10 : 18;
+  for (let i = 0; i < n; i++) {
+    const b = document.createElement('span'); b.className = 'bubble';
+    const s = 10 + Math.random() * 46;
+    b.style.cssText = `width:${s}px;height:${s}px;left:${Math.random() * 100}%;` +
+      `animation-duration:${9 + Math.random() * 12}s;animation-delay:${-Math.random() * 16}s;--dx:${(Math.random() * 80 - 40).toFixed(0)}px`;
+    box.appendChild(b);
+  }
+})();
+
+/* До / Після */
+(function beforeAfter() {
+  const wrap = $('#ba'), input = $('input', wrap);
+  const set = v => wrap.style.setProperty('--pos', v + '%');
+  input.addEventListener('input', () => set(input.value));
+  const io2 = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    io2.disconnect(); let t0 = null;
+    const demo = t => { t0 ??= t; const p = (t - t0) / 1800;
+      if (p >= 1) { input.value = 50; set(50); return; }
+      const v = 50 + Math.sin(p * Math.PI * 2) * 30 * (1 - p); input.value = v; set(v); requestAnimationFrame(demo); };
+    requestAnimationFrame(demo);
+  }, { threshold: .6 });
+  io2.observe(wrap);
+})();
+
+/* Калькулятор */
+(function calculator() {
+  const form = $('#calcForm'), area = $('#area'), areaOut = $('#areaOut'), sumEl = $('#sum'), extrasBox = $('#extras');
+  extrasBox.innerHTML = CONFIG.extras.map(x =>
+    `<label class="extra"><input type="checkbox" value="${x.id}"><span>${x.name}</span><em>+${fmt(x.price)} грн</em></label>`).join('');
+  let shown = 0, raf;
+  const animateTo = target => {
+    cancelAnimationFrame(raf);
+    const from = shown, t0 = performance.now(), dur = 500;
+    const step = t => { const p = Math.min((t - t0) / dur, 1); shown = from + (target - from) * (1 - Math.pow(1 - p, 3));
+      sumEl.textContent = fmt(shown); if (p < 1) raf = requestAnimationFrame(step); };
+    raf = requestAnimationFrame(step);
+  };
+  const state = () => {
+    const type = $('input[name=type]:checked', form).value, p = CONFIG.prices[type], m2 = +area.value;
+    const extras = CONFIG.extras.filter(x => $(`input[value=${x.id}]`, extrasBox).checked);
+    const total = Math.max(p.min, p.rate * m2) + extras.reduce((a, x) => a + x.price, 0);
+    return { type, p, m2, extras, total };
+  };
+  const update = () => {
+    const s = state();
+    areaOut.textContent = s.m2 + ' м²';
+    area.style.setProperty('--fill', ((area.value - area.min) / (area.max - area.min) * 100) + '%');
+    animateTo(s.total);
+  };
+  form.addEventListener('input', update); update();
+  $('#calcCta').addEventListener('click', () => {
+    const s = state();
+    $('#service').value = ({ regular: 'Підтримуюче прибирання', general: 'Генеральне прибирання', repair: 'Прибирання після ремонту' })[s.type];
+    $('#msg').value = `Розрахунок з сайту: ${s.p.label.toLowerCase()}, ${s.m2} м²` +
+      (s.extras.length ? ', додатково: ' + s.extras.map(x => x.name.toLowerCase()).join(', ') : '') + `. Орієнтовно ${fmt(s.total)} грн.`;
+  });
+})();
+
+/* Форма */
+(function lead() {
+  const form = $('#leadForm'), ok = $('#formOk');
+  const fgs = { name: $('#name').closest('.fg'), phone: $('#phone').closest('.fg') };
+  $$('input', form).forEach(i => i.addEventListener('input', () => i.closest('.fg').classList.remove('has-error')));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = $('#name').value.trim(), phone = $('#phone').value.trim();
+    const nameOk = name.length >= 2;
+    const digits = phone.replace(/\D/g, '');
+    const phoneOk = /^[+\d][\d\s()\-]{8,}$/.test(phone) && digits.length >= 10 && digits.length <= 13;
+    fgs.name.classList.toggle('has-error', !nameOk);
+    fgs.phone.classList.toggle('has-error', !phoneOk);
+    if (!nameOk || !phoneOk) { (!nameOk ? $('#name') : $('#phone')).focus(); return; }
+    const text = `Нова заявка з сайту\nІм'я: ${name}\nТелефон: ${phone}\nПослуга: ${$('#service').value}` +
+      ($('#msg').value.trim() ? `\nКоментар: ${$('#msg').value.trim()}` : '');
+    ok.classList.add('show');
+    window.open('https://t.me/' + CONFIG.telegram + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
